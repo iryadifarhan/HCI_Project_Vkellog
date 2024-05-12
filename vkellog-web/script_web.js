@@ -9,12 +9,12 @@ function dropDown(){
     let image = document.getElementById("burgerFoto")
     
     if(drop.style.height === "100px"){
-        image.src = '/assets/Project (20240410062000).png'
+        image.src = '../assets/Project (20240410062000).png'
         image.style.backgroundColor = "rgba(0,0,0,0)"
         drop.style.setProperty("height", "0px")
         
     }else{
-        image.src = '/assets/silangPutih.png'
+        image.src = '../assets/silangPutih.png'
         image.style.backgroundColor = "rgba(211,18,69,255)"
         image.style.borderRadius = "10px"
         drop.style.setProperty("height", "100px")
