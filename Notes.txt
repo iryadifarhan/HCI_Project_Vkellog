@@ -10,7 +10,11 @@ Kesimpulan:
 Saya sarankan untuk menggunakan live server plugin dari Visual Studio Code untuk memaksimalkan penggunaan atau menggunakan link yang sudah saya publish di git yang pada akhir note ini saya lampirkan, terima kasih.
 
 
-References:
+References asset (img, svg, dll):
+	- https://www.kelloggs.co.uk/en_GB/home.html
+	- 
+
+References (javascript):
 Sudah saya berikan pada masing-masing fitur/function namun untuk mempermudah pendapatan informasi akan saya rangkum pada note ini:
 	- Carousel (Main Page) : https://www.youtube.com/watch?v=749ta0nvj8s
 	- Menu Category Selection (Recipes) : https://www.youtube.com/watch?v=HRpjAGT7X4Y&t=817s&pp=ygUSY2F0ZWdvcnkgbWVudSBodG1s
