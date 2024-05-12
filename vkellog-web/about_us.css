@@ -513,6 +513,10 @@ footer #tradeMarks{
         flex-direction: column;
     }
 
+    .missions .item{
+        width: 70vw;
+    }
+
     /* Footer */
     footer .containerFooter{
         padding: 10px 30px;
