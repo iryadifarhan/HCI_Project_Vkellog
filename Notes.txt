@@ -7,12 +7,24 @@ Keseluruhan website hanya dapat digunakan secara fungsional Ketika dijalankan me
 Hal ini saya lakukan karena terdapat akses file block yakni Cross-Origin Resource Sharing (CORS) oleh system browser pada chrome, edge, dll, saat ingin mengakses/memodifikasi file css dari website tersebut yang bersifat local (beda domain). 
 
 Kesimpulan:
-Saya sarankan untuk menggunakan live server plugin dari Visual Studio Code untuk memaksimalkan penggunaan atau menggunakan link yang sudah saya publish di git yang pada akhir note ini saya lampirkan, terima kasih.
+Saya sarankan untuk menggunakan live server plugin dari Visual Studio Code untuk memaksimalkan penggunaan atau menggunakan link yang sudah saya publish di git yang mana pada akhir note ini saya lampirkan, terima kasih.
 
 
 References asset (img, svg, dll):
 	- https://www.kelloggs.co.uk/en_GB/home.html
-	- 
+	- https://www.wkkellogg.com/en-us/home.html
+	- https://en.wikipedia.org/wiki/Hamburger_button
+	- https://www.ingrediology.org/oktoberfest-pretzel-recipe-instructions
+	- https://cherryberryucm.com/benefits-of-hiring-an-inbound-call-center-provider-for-businesses/
+	- https://www.shutterstock.com/image-photo/young-latin-man-eating-breakfast-morning-344070368
+	- https://www.nestle-cereals.com/global/blog/healthy-breakfast/cereal-milk
+	- https://www.klipartz.com/en/search?q=target#google_vignette
+	- https://www.pngegg.com/en/png-zldsu
+	- https://www.svgrepo.com/svg/146216/milk-products
+	- https://www.freeiconspng.com/images/magnifying-glass-icon
+	- https://www.pngfind.com/mpng/hJiTbiR_history-icon-png-history-icon-transparent-png/
+	- https://www.canva.com/design/DAGCBAm-c7U/9hSwAoHV1bh3X5BaEEUEyg/edit?utm_content=DAGCBAm-c7U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 
 References (javascript):
 Sudah saya berikan pada masing-masing fitur/function namun untuk mempermudah pendapatan informasi akan saya rangkum pada note ini:
@@ -22,3 +34,8 @@ Sudah saya berikan pada masing-masing fitur/function namun untuk mempermudah pen
 	- Validate Email (Contact Us) : https://www.geeksforgeeks.org/how-to-validate-email-address-without-using-regular-expression-in-javascript/
 	- Validate Input is Letter Alphabet (Contact Us) : https://coderrocketfuel.com/article/how-to-check-if-a-character-is-a-letter-using-javascript
 	- Validate Message / Counting Words (Contact Us) : https://stackoverflow.com/questions/18679576/counting-words-in-string
+
+
+
+
+>> Link website yang sudah dipublish: https://iryadifarhan.github.io/HCI_Project_Vkellog/
