@@ -1,0 +1,493 @@
+body{
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+/* Header Contact Us logo */
+header{
+    padding: 0px 40px;
+    text-align: right;
+    z-index: 7;
+    position: relative;
+    height: 30px;
+}
+
+header img{
+    margin-top: 10px;
+    max-width: 100px;
+    width: 100%;
+    transform: translateY(1px);
+}
+
+/* Navigation Bar */
+nav{
+    top: 0;
+    background-color: white;
+    z-index: 6;
+    position: sticky;
+}
+
+nav .topContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    padding-bottom: 10px;
+    align-items: center;
+    z-index: 6;
+    position: relative;
+}
+
+nav #logo{
+    max-width: 150px;
+}
+
+nav h4{
+    margin: 0px;
+    color: rgb(189, 2, 2);
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+nav h4:hover{
+    color: white;
+    background-color: rgba(211,18,69,255);
+}
+
+nav #buttonContainer{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}   
+
+nav #burgerBar{
+    display: none;
+}
+
+nav #burgerFoto{
+    height: 50px;
+    transition: 0.3s;
+    border-radius: 10px;
+    vertical-align: bottom;
+}
+
+nav #dropDown{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    height: 0;
+    transition: 0.4s;
+    transform-origin: top;
+    overflow: hidden;
+}
+
+nav #dropDown h4{
+    border-top : 1px solid rgba(0, 0, 0, 0.5);
+    padding: 6px 25px;
+}
+
+nav #dropDown h4:hover{
+    background-color: rgba(12, 146, 199, 0.412);
+    transition: 0.3s;
+}
+
+
+/* Opening */
+.opening{
+    position: relative;
+}
+
+.opening img{
+    max-width: 100vw;
+    width: 100%;
+    /* max-height: 320px; */
+    height: auto;
+    object-fit:cover;
+    overflow:auto
+}
+
+.opening #text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 8%;
+    color: rgba(211,18,69,255);
+    font-size: 2rem;
+    text-shadow: 0px 2px 2px #00000055;
+}
+
+.opening #text h1{
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.opening #text p{
+    font-size: 1.2rem;
+    margin: 0px;
+    margin-left: 6px;
+    padding-bottom: 35px;
+}
+
+/* Recipes */
+.Heading{
+    text-align: center;
+    color: white;
+    background-color: rgba(211,18,69,255);
+    transform: translateY(-4px);
+    word-spacing: 4px;
+}
+
+.Heading h2{
+    margin: 0;
+    padding: 20px 15px;
+}
+
+.Heading img{
+    margin-top: 20px;
+    max-width: 80px;
+    width: 100%;
+}
+
+.buttons{
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.btn{
+    border-radius: 20px;
+    background-color: rgba(211,18,69,255);
+    color: white;
+    max-width: 110px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.btn:hover{
+    background-color: rgba(180,18,69,255);
+}
+
+.btn.active{
+    background-color: rgba(180,18,69,255);
+    text-decoration: underline;
+}
+
+.Items{
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 0.27fr);
+    justify-content: center;
+    justify-items: center;
+    align-items: start;
+    column-gap: 40px;
+    row-gap: 20px;
+    max-width: 1210px;
+    position: relative;
+    padding-top: 30px;
+}
+
+.item{
+    display: none;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.4);
+}
+
+.item:hover{
+    box-shadow: 0px 5px 20px hsla(0, 0%, 0%, 1);
+    transform: scale(1.05);
+}
+
+@keyframes FadeInUp {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.show{
+    animation: FadeInUp 700ms ease 1;
+    display: block;
+}
+
+.item img{
+    max-width: 250px;
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.item h3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px 0px;
+    margin: 0;
+    max-width: 250px;
+    width: 100%;
+    text-wrap: balance;
+    height: 35px;
+}
+
+.item .detail{
+    text-align: left;
+    margin: 0px 15px;
+    margin-bottom: 0px;
+    word-spacing: 2px;
+}
+
+.item .detail p{
+    margin: 0px;
+}
+
+.itemCounter{
+    left: 11%;
+    position: absolute;
+    display: inline-block;
+    margin: 20px 0px;
+}
+
+.itemCounter p{
+    display: inline;
+}
+
+.itemCounter span{
+    font-weight: bold;
+}
+
+/* Footer */
+footer{
+    margin: 5px 0px;
+}
+
+footer .containerFooter{
+    padding: 20px 40px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+}
+
+footer .about{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-bottom: 10px;
+}
+
+footer .about img{
+    max-width: 170px;
+}
+
+footer .about #aboutOptions{
+    margin: 0;
+    /* padding: 10px 0px; */
+    color: rgba(0, 0, 0, 0.623);
+    display: inline-block;
+    text-indent: 15px;
+    font-size: 1.2em;
+}
+
+footer .about #aboutOptions:hover{
+    color: rgba(211,18,69,255);
+}
+
+footer .about a{
+    width: fit-content;
+}
+
+footer .about #imageAnchor{
+    max-height: 61px;
+}
+
+footer #tradeMarks{
+    color: #D31245;
+    display: inline-block;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.containerFooter .mediasWrapper{
+    margin-bottom: 10px;
+    margin-top: auto;
+}
+
+.containerFooter .mediasWrapper h2{
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.containerFooter #medias{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#Instagram,#Facebook,#Twitter{
+    position: relative;
+}
+
+#Instagram span, #Facebook span, #Twitter span{
+    background-color: black;
+    border-radius: .33em;
+    bottom: -1.4em;
+    color: #fff;
+    display: none;
+    font-size: 1rem;
+    left: 50%;
+    margin: 0;
+    padding: .2em .5em;
+    position: absolute;
+    transform: translate(-50%,0);
+    visibility: visible;
+    width: auto;
+    z-index: 1;
+}
+
+#Instagram:hover span, #Facebook:hover span, #Twitter:hover span{
+    display: block;
+}
+
+@media only screen and (max-width: 768px) {
+    header{
+        padding: 0px 30px;
+    }
+
+    /* Navbar */
+    nav .topContainer {
+        padding: 15px 30px;
+        margin-top: 10px;
+        align-items: baseline;
+    }
+    
+    nav #buttonContainer{
+        display: none;  
+    }
+ 
+    nav #burgerBar{
+        display: block;
+    }
+
+    nav h4{
+        border-radius: 0px;
+    }
+
+    /* Header */
+    .opening #text h1{
+        font-size: 7vw;
+        width: 50%;
+    }
+
+    .opening #text p{
+        display: none;
+    }
+
+
+    /* Content */
+    .Heading img{
+        max-width: 50px;
+        margin: 0px;
+        margin-top: 5px;
+    }
+
+    .Heading h2{
+        max-width: 300px;
+        font-size: 1.2em;
+        padding: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 5px;
+    }
+
+    #items{
+        justify-content: center;
+    }
+
+    .buttons{
+        margin: 15px;
+        gap: 10px;
+    }
+
+    .Items{
+        grid-template-columns: repeat(2, 2fr);
+        margin-left: 15px;
+        margin-right: 15px;
+        gap: 20px;
+    }
+
+    .detail{
+        margin-top: 20px !important;
+        text-wrap: balance;
+        word-spacing: 2px;
+    }
+
+    .detail p::before{
+        content: "- ";
+    }
+
+    .itemCounter{
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 320px;
+        text-align: center;
+        transform: translateY(10px);
+    }
+
+    /* Footer */
+    footer .containerFooter{
+        padding: 10px 30px;
+        padding-bottom: 45px;
+        flex-direction: column;
+        row-gap: 5px;
+    }    
+
+    footer .about{
+        align-items: center;
+        row-gap: 15px;
+    }
+
+    .containerFooter .mediasWrapper{
+        margin-bottom: 0px;
+    }
+
+    .containerFooter .mediasWrapper h2{
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    
+    footer .about #aboutOptions{
+        text-indent: 0px;
+    }
+
+}
+
+@media only screen and (min-width: 769px){
+    nav #dropDown{
+        height: 0;
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icon_web.png">
+    <link rel="stylesheet" href="./contact_us.css">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header>
+        <a href="./contact_us.html" id="contactUs"><img src="../assets/Food Presentation in Red Blue Yellow Digital Stickers Style.png" alt=""></a>
+    </header>
+    
+    <nav>
+        <div class="navContainer">
+            <div class="topContainer">
+                <div id="homeContainer">
+                    <a href="../index.html"><img src="../assets/Project (20240410061929).png" id="logo" alt="Vkellog's"></a>
+                </div>
+                <div id="buttonContainer">
+                    <a href="./products.html"><h4>Products</h4></a>
+                    <a href="./recipes.html"><h4>Recipes</h4></a>
+                    <a href="./about_us.html"><h4>About Us</h4></a>
+                </div>
+                <a href="javascript:void(0)" onclick="dropDown()" id="burgerBar"><img src="../assets/Project (20240410062000).png" id="burgerFoto" alt="borger"></a>
+            </div>
+            <div id="dropDown">
+                <a href="./products.html"><h4>Products</h4></a>
+                    <a href="./recipes.html"><h4>Recipes</h4></a>
+                    <a href="./about_us.html"><h4>About Us</h4></a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="opening">
+            <img src="../assets/contactUs.jpeg" alt="">
+            <div id="text">
+                <h1>Contact Us</h1>
+                <p>Our Service To Fulfill Your Request.</p>
+            </div>
+        </div>
+
+        <div class="Heading">
+            <img src="../assets/klipartz.com.png" alt="">
+            <h2>Send Us Your Special Request 24/7</h2>
+        </div>
+
+        <!-- first name, last name, email address, and phone number. specify the nature of their inquiry -->
+        
+        <form action="#" method="post" id="contactForm" onsubmit="onFormSubmit(event)">
+            <h2>Request Form</h2>
+            <div class="formInput">
+                <div class="item NameFirst">
+                    <label for="FirstName" onclick="changeInputAsterisk(event,0)">First Name <span><b>*</b></span></label>
+                    <input type="text" id="FirstName" name="FirstName" placeholder="Your First Name" required onclick="changeInputAsterisk(event,0)">
+                    <p class="error FirstName">example: Io</p>
+                </div>
+                <div class="item NameLast">
+                    <label for="LastName" onclick="changeInputAsterisk(event,1)">Last Name <span><b>*</b></span></label>
+                    <input type="text" id="LastName" name="LastName" placeholder="Your Last Name" required onclick="changeInputAsterisk(event,1)">
+                    <p class="error LastName">example: Fleming</p>
+                </div>
+                <div class="item Email">
+                    <label for="emailInput" onclick="changeInputAsterisk(event,2)">Email <span><b>*</b></span></label>
+                    <input type="email" id="emailInput" name="email" placeholder="Your Email Address" required onclick="changeInputAsterisk(event,2)">
+                    <p class="error Email">example: test@gmail.com</p>
+                </div>
+                <div class="item PhoneNum">
+                    <label for="PhoneNum" onclick="changeInputAsterisk(event,3)">Phone Number <span><b>*</b></span></label>
+                    <input type="tel" inputmode="numeric" id="PhoneNum" name="PhoneNum" placeholder="Your Phone Number" minlength="8" maxlength="13" required onclick="changeInputAsterisk(event,3)">
+                    <p class="error PhoneNum">example: 088991234567</p>
+                </div>
+                <div class="item Message">
+                    <label for="messageInput">Message/Request</label>
+                    <textarea id="messageInput" name="messageInput" rows="4" placeholder="Your Message/Request" required></textarea>
+                </div>
+                <div class="item Verify">
+                    <label for="answer">Verify Question :</label>
+                    <div class="qna">
+                        <p id="question">What's <span id="num1"></span> <span id="operator"></span> <span id="num2"></span> equals to?</p>
+                        <input type="number" inputmode="numeric" name="answer" id="answer" placeholder="Your Answer">
+                    </div>
+                </div>
+                <button type="submit" onclick="validateMessage()">Send Message</button>
+            </div>
+        </form>
+        
+        <div class="companyContact">
+            <div class="info phone">
+                <h3>Call Us</h3>
+                <div class="wrapper_info">
+                    <a href="tel:031-4535-3872"><p id="numberPhone">031-4535-3872</p></a>
+                    <a href="tel:081-1599-8322"><p id="numberPhone">081-1599-8322</p></a>
+                </div>
+            </div>
+            <div class="info phone">
+                <h3>Location</h3>
+                <p>Jl. Panglima Polim No.100 1, RT.1/RW.5, Kramat Pela, Kec. Kby. Baru, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12130</p>
+            </div>
+            <div class="info phone">
+                <h3>Business Hours</h3>
+                <div class="wrapper_info">
+                    <p>Monday - Friday 10:00 am - 8:00 pm WIB</p>
+                    <p>Saturday 12:00 am - 6:00 pm WIB</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="about">
+                <a href="../index.html" id="imageAnchor">
+                    <img src="../assets/Project (20240410061929).png" id="logo" alt="Vkellog's">
+                </a>
+                <a href="./about_us.html">
+                    <p id="aboutOptions">About Us</p>
+                </a>
+                <a href="./contact_us.html">
+                    <p id="aboutOptions">Contact Us</p>
+                </a>
+            </div>
+            <div class="mediasWrapper">
+                <h2>Connect With Us!</h2>
+                <div id="medias">
+                    <div id="Instagram">
+                        <a href=""><img src="../assets/Instagram.svg" alt=""></a>
+                        <span>Instagram</span>
+                    </div>
+                    <div id="Facebook">
+                        <a href=""><img src="../assets/Facebook.svg" alt=""></a>
+                        <span>Facebook</span>
+                    </div>
+                    <div id="Twitter">
+                        <a href=""><img src="../assets/Twitter.svg" alt=""></a>
+                        <span>Twitter</span>
+                    </div>
+                </div>
+            </div>
+            <p id="tradeMarks">© 2024 VKellog's. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+<script src="./script_web.js"></script>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/icon_web.png">
+    <link rel="stylesheet" href="./recipes.css">
+    <title>Recipes</title>
+</head>
+<body>
+    <header>
+        <a href="./contact_us.html" id="contactUs"><img src="../assets/Food Presentation in Red Blue Yellow Digital Stickers Style.png" alt=""></a>
+    </header>
+    
+    <nav>
+        <div class="navContainer">
+            <div class="topContainer">
+                <div id="homeContainer">
+                    <a href="../index.html"><img src="../assets/Project (20240410061929).png" id="logo" alt="Vkellog's"></a>
+                </div>
+                <div id="buttonContainer">
+                    <a href="./products.html"><h4>Products</h4></a>
+                    <a href="./recipes.html"><h4>Recipes</h4></a>
+                    <a href="./about_us.html"><h4>About Us</h4></a>
+                </div>
+                <a href="javascript:void(0)" onclick="dropDown()" id="burgerBar"><img src="../assets/Project (20240410062000).png" id="burgerFoto" alt="borger"></a>
+            </div>
+            <div id="dropDown">
+                <a href="./products.html"><h4>Products</h4></a>
+                    <a href="./recipes.html"><h4>Recipes</h4></a>
+                    <a href="./about_us.html"><h4>About Us</h4></a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="opening">
+            <img src="../assets/recipeBanner.jpg" alt="">
+            <div id="text">
+                <h1>Our Recipes</h1>
+                <p>Recipes that you can make at home.</p>
+            </div>
+        </div>
+
+        <div class="Recipes">
+            <div class="Heading">
+                <img src="../assets/chef-hat-svgrepo-com.svg" alt="">
+                <h2>Find Your Desired Recipe Using Categories</h2>
+            </div>
+            <div class="buttons">
+                <div class="btn active" onclick="filterMenu('all')">
+                    <h3>All</h3>
+                </div>
+                <div class="btn" onclick="filterMenu('Breakfast')">
+                    <h3>Breakfast</h3>
+                </div>
+                <div class="btn" onclick="filterMenu('Snacks')">
+                    <h3>Snacks</h3>
+                </div>
+                <div class="btn" onclick="filterMenu('Meals')">
+                    <h3>Meals</h3>
+                </div>
+            </div>
+
+            <!-- kasih masing masing resep serving size, prep time -->
+            <div class="Items">
+                <div class="itemCounter">
+                    <p>Showing <span id="counter">9</span> recipes from "<span id="category">All</span>" category</p>
+                </div>
+                <div class="item Breakfast show">
+                    <img src="../assets/recip_img-5771521_cinnamon_winter_warmer_recipe.avif" alt="">
+                    <h3>Cinnamon Winter Warmer</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>250g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>40</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Snacks show">
+                    <img src="../assets/recip_img-254497_nuttybar.avif" alt="">
+                    <h3>Chocos Peanut Stick</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>100g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>30</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Meals show">
+                    <img src="../assets/recip_img-5771618_a_winters_tale_recipe.avif" alt="">
+                    <h3>Black-Cran Berries Creamy Yoghurt</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>220g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>50</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Breakfast show">
+                    <img src="../assets/break1.avif" alt="">
+                    <h3>Mixed Berry Breakfast Bowl Recipe</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>300g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>15</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Snacks show">
+                    <img src="../assets/snak2.avif" alt="">
+                    <h3>Caramel Bran Muffin</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>150g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>55</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Meals show">
+                    <img src="../assets/break2.avif" alt="">
+                    <h3>Apple & Cinnamon Bran Bowl Recipe</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>320g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>70</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Breakfast show">
+                    <img src="../assets/break3.avif" alt="">
+                    <h3>Chocolate Banana Crunch</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>200g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>40</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Snacks show">
+                    <img src="../assets/snak1.avif" alt="">
+                    <h3>Star Choco Chips</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>170g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>45</b> minutes</p>
+                    </div>
+                </div>
+                <div class="item Meals show">
+                    <img src="../assets/meal.webp" alt="">
+                    <h3>Garlic Bread Tomato Soup</h3>
+                    <div class="detail">
+                        <p>Serving Size: <b>500g</b> per serving</p>
+                        <p>Preparation Time: &#xb1 <b>90</b> minutes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="about">
+                <a href="../index.html" id="imageAnchor">
+                    <img src="../assets/Project (20240410061929).png" id="logo" alt="Vkellog's">
+                </a>
+                <a href="./about_us.html">
+                    <p id="aboutOptions">About Us</p>
+                </a>
+                <a href="./contact_us.html">
+                    <p id="aboutOptions">Contact Us</p>
+                </a>
+            </div>
+            <div class="mediasWrapper">
+                <h2>Connect With Us!</h2>
+                <div id="medias">
+                    <div id="Instagram">
+                        <a href=""><img src="../assets/Instagram.svg" alt=""></a>
+                        <span>Instagram</span>
+                    </div>
+                    <div id="Facebook">
+                        <a href=""><img src="../assets/Facebook.svg" alt=""></a>
+                        <span>Facebook</span>
+                    </div>
+                    <div id="Twitter">
+                        <a href=""><img src="../assets/Twitter.svg" alt=""></a>
+                        <span>Twitter</span>
+                    </div>
+                </div>
+            </div>
+            <p id="tradeMarks">© 2024 VKellog's. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+<script src="./script_web.js"></script>
+
+</html>

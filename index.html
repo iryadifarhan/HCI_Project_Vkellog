@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/icon_web.png">
+    <link rel="stylesheet" href="./style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <a href="./vkellog-web/contact_us.html" id="contactUs"><img src="./assets/Food Presentation in Red Blue Yellow Digital Stickers Style.png" alt=""></a>
+    </header>
+    
+    <nav>
+        <div class="navContainer">
+            <div class="topContainer">
+                <div id="homeContainer">
+                    <a href="./index.html"><img src="./assets/Project (20240410061929).png" id="logo" alt="Vkellog's"></a>
+                </div>
+                <div id="buttonContainer">
+                    <a href="./vkellog-web/products.html"><h4>Products</h4></a>
+                    <a href="./vkellog-web/recipes.html"><h4>Recipes</h4></a>
+                    <a href="./vkellog-web/about_us.html"><h4>About Us</h4></a>
+                </div>
+                <a href="javascript:void(0)" onclick="dropDown()" id="burgerBar"><img src="./assets/Project (20240410062000).png" id="burgerFoto" alt="borger"></a>
+            </div>
+            <div id="dropDown">
+                <a href="./vkellog-web/products.html"><h4>Products</h4></a>
+                    <a href="./vkellog-web/recipes.html"><h4>Recipes</h4></a>
+                    <a href="./vkellog-web/about_us.html"><h4>About Us</h4></a>
+            </div>
+        </div>
+    </nav>
+
+    <section>
+        <div class="banner">
+            <a href="#"><img src="./assets/Food Presentation in Red Blue Yellow Digital Stickers Style (1).png" alt=""></a>
+        </div>
+        <div class="topSeller">
+            <div class="header">
+                <img src="./assets/djempoel.png" alt="">
+            </div>
+            <div class="slider">
+                <h2><span id="namaProduk">(productname)</span></h2>
+                <div class="slides" onscroll="scrollCheck()">
+                    <img id="item_1" src="./assets/item_1.png" alt="">
+                    <img id="item_2"src="./assets/item_2.png" alt="">
+                    <img id="item_3" src="./assets/item_3.png" alt="">
+                </div>
+                <div class="description">
+                    <a href="./vkellog-web/products.html"><button><p>Check Products</p><img src="./assets/1200px-Magnifying_glass_icon.svg.png " alt=""></button></a>
+                </div>
+                <div class="slider-nav">
+                    <a href="#item_1" onclick="discSlider(0)"></a>
+                    <a href="#item_2" onclick="discSlider(1)"></a>
+                    <a href="#item_3" onclick="discSlider(2)"></a>
+                </div>
+                <button class="prev" onclick="prevSlide()">&#10094</button>
+                <button class="next" onclick="nextSlide()">&#10095</button>
+            </div>
+        </div>
+        <div class="bestRecipe">
+            <img src="./assets/chef-hat-svgrepo-com.svg" alt="">
+            <h1>Our Best Recipes</h1>
+            <div class="recipeContainer">
+                <div class="recipes">
+                    <div id="items">
+                        <img src="./assets/recip_img-5771618_a_winters_tale_recipe.avif" alt="">
+                        <h2>Black-Cran Berries Creamy Yoghurt</h2>
+                    </div>
+                    <div id="items">
+                        <img src="./assets/recip_img-5771521_cinnamon_winter_warmer_recipe.avif" alt="">
+                        <h2>Cinnamon Banana Hot Chocolate Milk</h2>
+                    </div>
+                    <div id="items">
+                        <img src="./assets/recip_img-254497_nuttybar.avif" alt="">
+                        <h2>Chocos Peanut Stick</h2>
+                    </div>
+                </div>
+                <a href="./vkellog-web/recipes.html"><button><p>Check More Recipes</p><img src="./assets/1200px-Magnifying_glass_icon.svg.png " alt=""></button></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="about">
+                <a href="./index.html" id="imageAnchor">
+                    <img src="./assets/Project (20240410061929).png" id="logo" alt="Vkellog's">
+                </a>
+                <a href="./vkellog-web/about_us.html">
+                    <p id="aboutOptions">About Us</p>
+                </a>
+                <a href="./vkellog-web/contact_us.html">
+                    <p id="aboutOptions">Contact Us</p>
+                </a>
+            </div>
+            <div class="mediasWrapper">
+                <h2>Connect With Us!</h2>
+                <div id="medias">
+                    <div id="Instagram">
+                        <a href=""><img src="./assets/Instagram.svg" alt=""></a>
+                        <span>Instagram</span>
+                    </div>
+                    <div id="Facebook">
+                        <a href=""><img src="./assets/Facebook.svg" alt=""></a>
+                        <span>Facebook</span>
+                    </div>
+                    <div id="Twitter">
+                        <a href=""><img src="./assets/Twitter.svg" alt=""></a>
+                        <span>Twitter</span>
+                    </div>
+                </div>
+            </div>
+            <p id="tradeMarks">© 2024 VKellog's. All rights reserved</p>
+        </div>
+    </footer>
+</body>
+
+<script src="./index.js"></script>
+
+</html>
