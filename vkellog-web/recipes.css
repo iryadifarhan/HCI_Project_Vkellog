@@ -151,6 +151,7 @@ nav #dropDown h4:hover{
 .Heading h2{
     margin: 0;
     padding: 20px 15px;
+    text-wrap: pretty;
 }
 
 .Heading img{
