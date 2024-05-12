@@ -4,7 +4,7 @@ Human Computer Interaction - BC83 - LAB
 Notes:
 Keseluruhan website hanya dapat digunakan secara fungsional Ketika dijalankan melalui live server atau menggunakan URL yang sudah saya post di git.
 
-Hal ini saya lakukan karena terdapat akses file block yakni CORS oleh system browser pada chrome, edge, dll, saat ingin mengakses/memodifikasi file css dari website tersebut yang bersifat local (beda domain). 
+Hal ini saya lakukan karena terdapat akses file block yakni Cross-Origin Resource Sharing (CORS) oleh system browser pada chrome, edge, dll, saat ingin mengakses/memodifikasi file css dari website tersebut yang bersifat local (beda domain). 
 
 Kesimpulan:
 Saya sarankan untuk menggunakan live server plugin dari Visual Studio Code untuk memaksimalkan penggunaan atau menggunakan link yang sudah saya publish di git yang pada akhir note ini saya lampirkan, terima kasih.
