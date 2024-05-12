@@ -326,7 +326,7 @@ form h2{
 .companyContact .wrapper_info{
     display: flex;
     flex-direction: column;
-    row-gap: 7px;
+    row-gap: 12px;
     align-items: center;
 }
 
@@ -515,6 +515,10 @@ footer #tradeMarks{
     .item.Verify .qna{
         flex-direction: column;
         align-items: start;
+    }
+
+    .companyContact p{
+        max-width: 50vw;
     }
 
     /* Footer */

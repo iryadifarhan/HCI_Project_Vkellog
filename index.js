@@ -73,8 +73,6 @@ function showSlide(flag){
     firstImg = slideContainer.querySelectorAll("img")[0]
     firstImg = firstImg.clientWidth
 
-    console.log(slideContainer.scrollLeft)
-
     if(slideIdx >= items.length){
         slideContainer.scrollLeft = 0
         slideIdx = 0
