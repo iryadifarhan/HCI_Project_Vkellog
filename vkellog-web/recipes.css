@@ -186,6 +186,11 @@ nav #dropDown h4:hover{
     text-decoration: underline;
 }
 
+.btn h3{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .Items{
     margin: 20px auto;
     display: grid;
