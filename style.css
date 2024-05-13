@@ -388,6 +388,10 @@ img.spotLight{
 .recipes #items h2{
     text-wrap: balance;
     margin-top: 5px;
+    height: 2.2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .recipes #items img{
