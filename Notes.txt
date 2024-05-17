@@ -23,12 +23,14 @@ References asset (img, svg, dll):
 	- https://www.svgrepo.com/svg/146216/milk-products
 	- https://www.freeiconspng.com/images/magnifying-glass-icon
 	- https://www.pngfind.com/mpng/hJiTbiR_history-icon-png-history-icon-transparent-png/
+	- https://www.pngwing.com/en/free-png-tlxjn/download
 	- https://www.vecteezy.com/vector-art/5567989-red-vector-banner-top-seller-with-thumbs-up-and-stars-modern-web-banner-element-top-seller-sale-label-bestseller-sticker-recommendation-best-seller-sign-good-advice
 	- https://www.canva.com/design/DAGCBAm-c7U/9hSwAoHV1bh3X5BaEEUEyg/edit?utm_content=DAGCBAm-c7U&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
 
 References (javascript):
 Sudah saya berikan pada masing-masing fitur/function namun untuk mempermudah pendapatan informasi akan saya rangkum pada note ini:
+	- Image Load First (All) : https://stackoverflow.com/questions/7511352/load-specific-image-before-anything-else
 	- Carousel (Main Page) : https://www.youtube.com/watch?v=749ta0nvj8s
 	- Menu Category Selection (Recipes) : https://www.youtube.com/watch?v=HRpjAGT7X4Y&t=817s&pp=ygUSY2F0ZWdvcnkgbWVudSBodG1s
 	- Timeline Company Progression (About Us) : https://www.youtube.com/watch?v=oXLha6A4gjc&pp=ygURY2Fyb3VzZWwgaHRtbCBjc3M%3D
