@@ -154,6 +154,7 @@ let checkPhone = false
 let checkMessage = false
 
 let verifyInquiry = false
+let dataSent = false
 let numero1 = Math.floor(Math.random() * 10) + 1
 let numero2 = Math.floor(Math.random() * 10) + 1
 
@@ -171,38 +172,44 @@ if(numero1 >= numero2){
 function onFormSubmit(e){
     e.preventDefault()
 
-    if(checkFirstName == true && checkLastName == true && checkEmail == true && checkPhone == true && checkMessage == true){
-        if(numero1 >= numero2){
-            document.getElementById("num1").innerHTML = `<b>${numero1}</b>`
-            document.getElementById("num2").innerHTML = `<b>${numero2}</b>`
-        }else{
-            document.getElementById("num1").innerHTML = `<b>${numero2}</b>`
-            document.getElementById("num2").innerHTML = `<b>${numero1}</b>`
-        }
-
-        document.getElementById("operator").innerHTML = `<b>${operator}</b>`       
-        document.getElementsByClassName("item Verify")[0].style.setProperty("display","block")
-    
-        if(Number(e.target.children[1].children[5].children[1].children[1].value) == result){
-            verifyInquiry = true
-        }else{
-            alert("Please answer the verify question correctly!")
-        }
-    }else if(checkFirstName == true && checkLastName == true && checkEmail == true && checkPhone == true && checkMessage == false){
-        alert("Please specify your message/request specifically [minimum 3 words]")
+    if(dataSent == true){
+        alert("A request has already been sent!\nPlease refresh the page to send another request, thank you.")
     }else{
-        alert("There are still credentials to work on!")
-    }
-
-    if(verifyInquiry == true){
-        const firstName     = e.target.children[1].children[0].children[1].value
-        const LastName      = e.target.children[1].children[1].children[1].value
-        const emailValue    = e.target.children[1].children[2].children[1].value
-        const phoneNumber   = e.target.children[1].children[3].children[1].value
-        const message       = e.target.children[1].children[4].children[1].value
+        if(checkFirstName == true && checkLastName == true && checkEmail == true && checkPhone == true && checkMessage == true){
+            if(numero1 >= numero2){
+                document.getElementById("num1").innerHTML = `<b>${numero1}</b>`
+                document.getElementById("num2").innerHTML = `<b>${numero2}</b>`
+            }else{
+                document.getElementById("num1").innerHTML = `<b>${numero2}</b>`
+                document.getElementById("num2").innerHTML = `<b>${numero1}</b>`
+            }
     
-        console.log(firstName, LastName, emailValue, phoneNumber, message);
-        alert("Data have been sent!")
+            document.getElementById("operator").innerHTML = `<b>${operator}</b>`       
+            document.getElementsByClassName("item Verify")[0].style.setProperty("display","block")
+        
+            if(Number(e.target.children[1].children[5].children[1].children[1].value) == result){
+                verifyInquiry = true
+            }else{
+                alert("Please answer the verify question correctly!")
+                verifyInquiry = false
+            }
+        }else if(checkFirstName == true && checkLastName == true && checkEmail == true && checkPhone == true && checkMessage == false){
+            alert("Please specify your message/request specifically [minimum 3 words]")
+        }else{
+            alert("There are still credentials to work on!")
+        }
+
+        if(verifyInquiry == true){
+            const firstName     = e.target.children[1].children[0].children[1].value
+            const LastName      = e.target.children[1].children[1].children[1].value
+            const emailValue    = e.target.children[1].children[2].children[1].value
+            const phoneNumber   = e.target.children[1].children[3].children[1].value
+            const message       = e.target.children[1].children[4].children[1].value
+        
+            console.log(firstName, LastName, emailValue, phoneNumber, message)
+            alert("Your request have been sent! Thank you.")
+            dataSent = true
+        }
     }
 }
 
@@ -212,27 +219,31 @@ let indexTemp = null
 //reference: https://www.geeksforgeeks.org/how-to-validate-email-address-without-using-regular-expression-in-javascript/
 function validateEmailAddress(emailAddress) {
     let atSymbol = emailAddress.indexOf("@");
-    let dotSymbol = emailAddress.lastIndexOf(".");
     let spaceSymbol = emailAddress.indexOf(" ");
-    let mailName = emailAddress.indexOf("com")
+    let emailDomainCheck = false
 
     let emailUsername = emailAddress.substr(0, atSymbol)
     let emailUsername_isNotValid = false
 
-    // email_username could be allowed to have only underscores and number 
+    // email username could be allowed to have only underscores and number 
     for(let i = 0; i < emailUsername.length ; i++){
         if(emailUsername.charAt(i) == "'" ||emailUsername.charAt(i) == "\"" || emailUsername.charAt(i) == "!" || emailUsername.charAt(i) == "@" || emailUsername.charAt(i) == "$"
         || emailUsername.charAt(i) == "%" || emailUsername.charAt(i) == "^" || emailUsername.charAt(i) == "&" || emailUsername.charAt(i) == "*" || emailUsername.charAt(i) == "("
         || emailUsername.charAt(i) == ")" || emailUsername.charAt(i) == "-" || emailUsername.charAt(i) == "+" || emailUsername.charAt(i) == "=" || emailUsername.charAt(i) == "{"
         || emailUsername.charAt(i) == "}" || emailUsername.charAt(i) == "[" || emailUsername.charAt(i) == "]" || emailUsername.charAt(i) == "\\" || emailUsername.charAt(i) == "|"
-        || emailUsername.charAt(i) == ":" || emailUsername.charAt(i) == ";" || emailUsername.charAt(i) == "," || emailUsername.charAt(i) == "<" || emailUsername.charAt(i) == "." 
-        || emailUsername.charAt(i) == ">" || emailUsername.charAt(i) == "/" || emailUsername.charAt(i) == "?"){
+        || emailUsername.charAt(i) == ":" || emailUsername.charAt(i) == ";" || emailUsername.charAt(i) == "," || emailUsername.charAt(i) == "<" || emailUsername.charAt(i) == ">" 
+        || emailUsername.charAt(i) == "/" || emailUsername.charAt(i) == "?"){
             emailUsername_isNotValid = true
             break
         }
     }
     
-    if ((atSymbol != -1) && (atSymbol != 0) && (dotSymbol != -1) && (dotSymbol != 0) && (dotSymbol > atSymbol + 1) && (emailAddress.length > dotSymbol + 1) && (mailName != -1) && (spaceSymbol == -1) && (emailUsername_isNotValid == false)) {
+    // top level domain email check (could only ends with the specified TLD)
+    if(emailAddress.endsWith(".com") || emailAddress.endsWith(".ac.id") || emailAddress.endsWith(".co.id") || emailAddress.endsWith(".net") || emailAddress.endsWith(".org") || emailAddress.endsWith(".co")){
+        emailDomainCheck = true
+    }
+
+    if ((atSymbol != -1) && (atSymbol != 0) && (spaceSymbol == -1) && (emailUsername_isNotValid == false) && emailDomainCheck == true) {
         document.getElementsByTagName("input")[2].style.backgroundColor = "rgba(0, 255, 0, 0.1)"
         document.getElementsByClassName("error Email")[0].innerHTML = "Email address is <b>valid</b>."
         return true;
