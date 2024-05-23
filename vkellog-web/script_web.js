@@ -218,7 +218,7 @@ let indexTemp = null
 
 //reference: https://www.geeksforgeeks.org/how-to-validate-email-address-without-using-regular-expression-in-javascript/
 function validateEmailAddress(emailAddress) {
-    let atSymbol = emailAddress.indexOf("@");
+    let atSymbol = emailAddress.lastIndexOf("@");
     let spaceSymbol = emailAddress.indexOf(" ");
     let emailDomainCheck = false
 
