@@ -222,13 +222,14 @@ form h2{
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .formInput .wrapperRadio{
     display: flex;
     align-items: center;
     margin-top: 5px;
-    min-width: 100px;
+    width: 100px;
 }
 
 .formInput .wrapperRadio label{

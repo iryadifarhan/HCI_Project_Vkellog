@@ -416,6 +416,7 @@ footer #tradeMarks{
     .brands{
         margin-top: 0px;
         padding-top: 150px;
+        min-height: 180px;
     }
 
     .brands h3{
@@ -457,15 +458,5 @@ footer #tradeMarks{
 @media only screen and (min-width: 769px){
     nav #dropDown{
         height: 0;
-    }
-}
-
-@media only screen and (max-width: 1070px){
-    #items{
-        margin: 30px 80px;
-    }
-
-    #item{
-        margin: 0px 30px;
     }
 }
