@@ -437,14 +437,14 @@ footer #tradeMarks{
     }
 
     .buttons{
-        margin: 15px;
+        margin: 15px 5px;
         gap: 10px;
     }
 
     .Items{
         grid-template-columns: repeat(2, 2fr);
-        margin-left: 15px;
-        margin-right: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
         gap: 20px;
     }
 

@@ -78,6 +78,23 @@
                     <input type="tel" inputmode="numeric" id="PhoneNum" name="PhoneNum" placeholder="Your Phone Number" minlength="8" maxlength="13" required onclick="changeInputAsterisk(event,3)">
                     <p class="error PhoneNum">example: 088991234567</p>
                 </div>
+                <div class="item Inquiry">
+                    <label for="Inquiry">Inquiry type</label>
+                    <div class="radioInput">
+                        <div class="wrapperRadio">
+                            <input type="radio" name="inquiry" id="inquiry1" value="General" checked><label for="inquiry1">General</label>
+                        </div>
+                        <div class="wrapperRadio">
+                            <input type="radio" name="inquiry" id="inquiry2" value="Complaint"><label for="inquiry2">Complaint</label>
+                        </div>
+                        <div class="wrapperRadio">
+                            <input type="radio" name="inquiry" id="inquiry3" value="Feedback"><label for="inquiry3">Feedback</label>
+                        </div>
+                        <div class="wrapperRadio">
+                            <input type="radio" name="inquiry" id="inquiry4" value="Business"><label for="inquiry4">Business</label>
+                        </div>
+                    </div>
+                </div>
                 <div class="item Message">
                     <label for="messageInput">Message/Request</label>
                     <textarea id="messageInput" name="messageInput" rows="4" placeholder="Your Message/Request" required></textarea>

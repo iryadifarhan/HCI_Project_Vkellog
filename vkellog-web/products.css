@@ -253,6 +253,9 @@ nav #dropDown h4:hover{
 #item img{
     margin-top: 20px;
     max-width: 200px;
+    min-width: 160px;
+    object-fit: contain;
+    width: 100%;
     border-radius: 20px;
     height: 200px;
 }
@@ -413,6 +416,10 @@ footer #tradeMarks{
     .brands{
         margin-top: 0px;
         padding-top: 150px;
+    }
+
+    .brands h3{
+        font-size: 1em;
     }
 
     #items{

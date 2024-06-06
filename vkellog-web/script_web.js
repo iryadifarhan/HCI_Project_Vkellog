@@ -187,7 +187,7 @@ function onFormSubmit(e){
             document.getElementById("operator").innerHTML = `<b>${operator}</b>`       
             document.getElementsByClassName("item Verify")[0].style.setProperty("display","block")
         
-            if(Number(e.target.children[1].children[5].children[1].children[1].value) == result){
+            if(Number(e.target.children[1].children[6].children[1].children[1].value) == result){
                 verifyInquiry = true
             }else{
                 alert("Please answer the verify question correctly!")
@@ -204,10 +204,18 @@ function onFormSubmit(e){
             const LastName      = e.target.children[1].children[1].children[1].value
             const emailValue    = e.target.children[1].children[2].children[1].value
             const phoneNumber   = e.target.children[1].children[3].children[1].value
-            const message       = e.target.children[1].children[4].children[1].value
+            const inquiry       = e.target.children[1].children[4].children[1]
+            const message       = e.target.children[1].children[5].children[1].value
         
-            console.log(firstName, LastName, emailValue, phoneNumber, message)
-            alert("Your request have been sent! Thank you.")
+            let inquiryChecked = null
+            for(let i = 0 ; i < 4; i++){
+                if(inquiry.children[i].children[0].checked){
+                    inquiryChecked = inquiry.children[i].children[0].value
+                }
+            }
+
+            console.log(firstName, LastName, emailValue, phoneNumber, inquiryChecked, message)
+            alert(`Your ${inquiryChecked} request have been sent! Thank you ${firstName}.`)
             dataSent = true
         }
     }
@@ -267,6 +275,9 @@ function validateName(nameInput){
 
     // reference : https://coderrocketfuel.com/article/how-to-check-if-a-character-is-a-letter-using-javascript
     for(let i = 0; i < nameInput.value.length ; i++){
+        if(nameInput.value.charAt(i) == ' '){
+            continue
+        }
         if(nameInput.value.charAt(i).toLowerCase() != nameInput.value.charAt(i).toUpperCase() == false){
             symbolDetect = true
             break

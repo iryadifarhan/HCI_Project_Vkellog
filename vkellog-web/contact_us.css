@@ -187,6 +187,7 @@ form h2{
     grid-template-areas: "nameFirst nameLast"
                          "email email"
                          "phoneNum phoneNum"
+                         "inquiry inquiry" 
                          "message message"
                          "verify verify";
     align-items: center;
@@ -216,8 +217,42 @@ form h2{
     transition: 0.4s;
 }
 
+.formInput .radioInput{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.formInput .wrapperRadio{
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    min-width: 100px;
+}
+
+.formInput .wrapperRadio label{
+    margin: 0;
+    padding-top: 2px;
+}
+
+.formInput input[type=radio]{
+    accent-color: #D31245;
+    background-color: #D31245;
+    border-color: #D31245;
+    outline: none !important;
+}
+
+.formInput input[type=radio]:checked + label {
+    color: #D31245;
+}
+
+.formInput input[type=radio]:checked:hover + label {
+    color: rgb(189, 2, 2) !important;
+}
+
 .formInput input:focus, textarea:focus{
-    outline: rgba(211,18,69,255) solid 1px;
+    outline: #D31245 solid 1px;
 }
 
 .formInput button{
@@ -282,9 +317,16 @@ form h2{
     grid-area: phoneNum;
 }
 
+.item.Inquiry{
+    grid-area: inquiry;
+    margin-bottom: 0;
+}
+
 .item.Message{
     grid-area: message;
+    margin-top: 5px;
 }
+
 
 .item.Verify{
     grid-area: verify;
@@ -508,6 +550,7 @@ footer #tradeMarks{
                         "nameLast"
                         "email"
                         "phoneNum"
+                        "inquiry"
                         "message"
                         "verify";
         padding: 20px;
